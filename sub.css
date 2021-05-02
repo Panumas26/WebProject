@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+/*font https://fonts.google.com/specimen/Kanit?preview.text_type=custom*/
+
+/* ---------------------------------body-------------------------------- */
+body{
+    font-family:'Kanit', sans-serif;
+    font-weight: 1000;
+    margin: 0;
+    background-image: url('pic/BG.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+/* ---------------------------------body-------------------------------- */
+/* ---------------------------------html-------------------------------- */
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+/* ---------------------------------html-------------------------------- */
+/*------------------------------------navbar--------------------------------*/
+#innavbar{
+    margin-top: 10px;
+}
+#navbar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 30px;
+}
+  
+#navbar div>a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 1000;
+    padding: 14px 16px ;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+  
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #575454;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#navbar div>a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+}
+/*------------------------------------navbar--------------------------------*/
