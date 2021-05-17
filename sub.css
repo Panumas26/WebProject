@@ -6,7 +6,7 @@ body{
     font-family:'Kanit', sans-serif;
     font-weight: 1000;
     margin: 0;
-    background-color: #f5dc99;
+    background-color: #FFE8D5;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -21,7 +21,6 @@ html{
 /* ---------------------------------html-------------------------------- */
 /*------------------------------------navbar--------------------------------*/
 .innavbar{
-    margin-top: 10px;
     margin-left: 10px;
 }
 
@@ -47,7 +46,8 @@ html{
     text-align: center;
     padding: 15px;
     text-decoration: none;
-    width: 200px;
+    width: auto;
+    height: 50px;
     padding: 20px;
 }
   
