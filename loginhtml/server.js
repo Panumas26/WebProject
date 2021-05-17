@@ -75,7 +75,7 @@ app.post("/register", async (req, res) => {
         sql = `INSERT INTO users (firstname,lastname,gender,birthday,username,email,phone,password) VALUES ("${req.body.firstname}","${req.body.lastname}","${req.body.gender}","${req.body.birthday}","${req.body.username}","${req.body.email}","${req.body.tel}","${req.body.password}")`;
         result = await queryDB(sql);
         console.log("Register Success!");
-        return res.res.redirect("index.html");
+        return res.redirect("index.html");
     }
 
 })
