@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 /*font https://fonts.google.com/specimen/Kanit?preview.text_type=custom*/
 
 /* ---------------------------------body-------------------------------- */
 body{
-    font-family:'Kanit', sans-serif;
+    font-family:'Itim', sans-serif;
     font-weight: 1000;
     margin: 0;
-    background-color: #FFE8D5;
+    background-color: #F6ECBB;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 100%;
+    color: #583E19;
 }
 /* ---------------------------------body-------------------------------- */
 /* ---------------------------------html-------------------------------- */
@@ -27,7 +29,7 @@ html{
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: rgb(248, 160, 60);
+    background-color: #F0AD69;
 }
   
 /* Links inside the navbar */
@@ -44,17 +46,16 @@ html{
     float: left;
     display: block;
     text-align: center;
-    padding: 15px;
+    /* padding: 10px; */
     text-decoration: none;
     width: auto;
     height: 50px;
-    padding: 20px;
 }
   
-.innavbar img{
+/* .innavbar img{
     height: 50px;
     width: 50px;
-}
+} */
   
 /* The dropdown container */
 .dropdown {
@@ -62,6 +63,7 @@ html{
     overflow: hidden;
     height: auto;
     width: auto;
+    padding-right: 20px;
 }
   
 /* Dropdown button */
@@ -72,10 +74,16 @@ html{
     text-align: center;
     text-decoration: none;
     font-weight: 1000;
-    padding: 14px 16px ;
+    padding: 10px ;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropbtn div img{
+    width: 100px;
+	height: 100px;
+    border-radius: 50%;
 }
   
 /* Add a red background color to navbar links on hover */
@@ -97,7 +105,7 @@ html{
 /* Links inside the dropdown */
 .dropdown-content a {
     float: none;
-    color: black;
+    color: #583E19;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -115,22 +123,43 @@ html{
 }
 /*------------------------------------navbar--------------------------------*/
 
-.item1 { grid-area: header;}
-.item2 { grid-area: post; }
-.item3 { grid-area: main; }
+.item1 { 
+    grid-area: header;
+    text-align: center;
+    grid-column: 2 / span 1;
+    background-color: #F4D594;
+}
+.item2 { 
+    grid-area: post; 
+    text-align: center;
+    grid-column: 2 / span 1;
+    background-color: #F4D594;
+}
+.item3 { 
+    grid-area: main; 
+    text-align: center;
+    grid-column: 2 / span 1;
+    background-color: #F4D594;
+}
 
 .grid-container {
-  display: grid;
-  grid-template-areas:
-    'header '
+	display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-areas: 
+    'header'
     'post'
     'main';
-  grid-gap: 10px;
-  padding: 10px;
-  background-color: #ebb25e;
+    /* grid-gap: 10px; */
+    background-color: #F6ECBB;
 }
+
+.grid-container-profile{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
 .grid-container > div {
-  background-color: #f5dc99;
+  /* background-color: #f5dc99; */
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
@@ -139,20 +168,35 @@ html{
 #posting{
 	text-align: center;
 	padding-right: 3%;
-	width:50%;
+	/* width:50%; */
 	
 }
 
-#detail{
+.detail{
 	text-align: center;
 	padding-right: 3%;
-	width:50%;
+	/* width:50%; */
 	
 }
+
+.detail div{
+    border-radius: 21px;
+    background-color: #FCCD9F;
+    border: 5px solid #C48547;
+    margin-left: 10px;
+    padding: 20px;
+    width: auto;
+    text-align: left;
+}
+
+#Headdetail{
+    background-color: #C38647;
+}
+
 #description{
 	text-align: center;
 	padding-right: 3%;
-	width:50%;
+	/* width:50%; */
 	
 }
 
@@ -163,6 +207,13 @@ textarea{
 	margin-right: 0px;
 	text-align: left;
 	font-size: 20px;
+    color: #583E19;
+    font-family:'Itim', sans-serif;
+}
+
+button{
+    color: #583E19;
+    font-family:'Itim', sans-serif;
 }
 
 #postbutton{
@@ -216,15 +267,24 @@ hr {
 }
 
 #browsePic{
-	display: inline-block;
 	margin-right: 3%;
 }
 #displayPic{
 	/*display: inline-block;*/
-	width:120px;
-	height: 100px;
-	border: 2px solid black;
+	width: 150px;
+	height: 150px;
     border-radius: 50%;
+    border: 5px solid #C48547;
+
+	/*background-color: #94A5AC;*/
+}
+
+#displayPic img{
+	/*display: inline-block;*/
+	width: 150px;
+	height: 150px;
+    border-radius: 50%;
+
 
 	/*background-color: #94A5AC;*/
 }

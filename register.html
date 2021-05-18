@@ -1,18 +1,71 @@
-<!DOCTYPE html>
+<html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="John Doe">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-    <title>Aboutme</title>
+  <title>Register</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' type='text/css' href='decor.css'>
+  <script type="text/javascript" src="index.js"></script>
 </head>
-<body >
-    
+
+<body>
+  <div class="header"><img id="sizelogo" src="public/img/owaLogo.png" alt="Logo"></div>
+  <div class="dogface">
+    <div class="bodyform_register">
+      <form name="myForm" id="myForm" action="/register" method="POST" accept-charset="utf-8" class="form">
+        <div class="grid_login">
+          <div id="1">
+            <h2>Firstname</h2>
+            <input type="text" name="firstname" class="firstname" required>
+          </div>
+          <div id="2">
+            <h2>Lastname</h2>
+            <input type="text" name="lastname" class="lastname" required>
+          </div>
+        </div>
+        <h2>Gender</h2>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <div class="grid_login">
+          <div id="1">
+            <h2>E-mail</h2>
+            <input type="email" name="email" class="email" required>
+          </div>
+          <div id="2">
+            <h2>Tel. No.</h2>
+            <input type="text" name="tel" class="tel" required>
+          </div>
+        </div>
+        <h2>Birthday</h2>
+        <input type="date" name="birthday" class="birthday" required>
+        <h2>Username</h2>
+        <input type="text" name="username" class="username" required>
+        <div class="grid_login">
+          <div id="1">
+            <h2>Password</h2>
+            <input type="password" name="password" class="password" required>
+          </div>
+          <div id="2">
+            <h2>Confirm Password</h2>
+            <input type="password" name="re_password" class="password" required>
+          </div>
+        </div>
+
+
+        <!-- button -->
+        <div class="set_button">
+          <div id="but_login">
+            <input class="button" type="submit" value="Register">
+            <input class="button" type="reset" value="Cancle">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
+
 </html>

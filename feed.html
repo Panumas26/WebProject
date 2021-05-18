@@ -9,19 +9,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <link rel='stylesheet' type='text/css' media='screen' href='sub.css'>
-    <!-- <script src='main.js'></script> -->
+    <script type="text/javascript" src="feed.js"></script>
     <title>Feed</title>
 </head>
 <body>
     <div>
         <div class="navbar">
             <a href="feed.html">
-                <img class="pic" src="pic/owaLogo.png" alt="Icon OwaBook" />
+                <img class="logopic" src="public/img/owaLogo.png" alt="Icon OwaBook" />
             </a>
             <div class="innavbar">
                 <div class="dropdown">
-                    <button class="dropbtn"><img src= "pic/avatar.png" alt="Profile img">
-                    <i class="fa fa-caret-down"></i>
+                    <button class="dropbtn">
+                        <div id = "profileimgnav">
+                            <img src= "public/img/avatar.png" alt="Profile img">
+                        </div>
+                        <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
                         <a href="profile.html">Profile</a>
@@ -34,11 +37,9 @@
         <div class="grid-container">
 
 			<div class="item1">
-				
 				<div id="displayPic">
-                    <img src= "pic/avatar.png" alt="Profile img">
+                    <img src= "public/img/avatar.png" alt="Profile img">
                 </div>
-				
 			</div>
 			
             <div class="item2"> 

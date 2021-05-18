@@ -1,18 +1,54 @@
-<!DOCTYPE html>
+<html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="John Doe">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-    <title>Aboutme</title>
+  <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' type='text/css' href='decor.css'>
+  <script type="text/javascript" src="index.js"></script>
+
 </head>
-<body >
-    
+
+<body>
+  <div class="header"><img id="sizelogo" src="public/img/owaLogo.png" alt="Logo"></div>
+  <div class="dogface">
+    <div class="bodyform">
+      <div class="form">
+        <form name="myLogin" id="myLogin" method="POST" action="/login" method="POST" accept-charset="utf-8">
+          <div class="content">
+            <h2 id="font-login">Username</h2>
+            <input type="text" name="username" class="usernamelog" required>
+            <br>
+            <div class="center"></div>
+            <h2 id="font-login">Password</h2>
+            <input type="password" name="password" class="passwordlog" required>
+            <br>
+          </div>
+          <!-- button -->
+          <div class="set_button">
+            <div id="but_login">
+              <input class="button" type="submit" value="Login">
+              <input class="button" type="reset" value="Cancle">
+            </div>
+          </div>
+          <!-- forgetpass -->
+          <a class="forget_pass" href="home.html">Forget Password</a>
+          <!-- or -->
+          <div class="grid-container">
+            <div id="textline1"></div>
+            <div id="textOr">
+              Or
+            </div>
+            <div id="textline2"></div>
+          </div>
+          <!-- register -->
+          <div>
+            <a class="Regis-text" href="register.html">Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
