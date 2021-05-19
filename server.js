@@ -129,6 +129,14 @@ app.post('/profilepic', (req,res) => {
     })
 })
 
+app.get('/logout', (req,res) => {
+    res.clearCookie('username')
+    res.clearCookie('img')
+    res.clearCookie('user_id')
+    console.log("Log out")
+    return res.redirect('index.html');
+})
+
 const updateImg = async (username, filen) => {
     let sql = `UPDATE users SET img = '${filen}' WHERE username = '${username}'`;
     let result = await queryDB(sql);

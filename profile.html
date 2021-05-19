@@ -28,63 +28,64 @@
                     </button>
                     <div class="dropdown-content">
                         <a href="profile.html">Profile</a>
-                        <a href="index.html">Log out</a>
+                        <a href="/logout">Log out</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="grid-container">
-			<div class="item1">
-				<div class="grid-container-profile">
-				    <div id="browsePic">
-					    <div id="displayPic">
-						    <img src= "public/img/avatar.png" alt="Profile img">
-					    </div>
-					    <form action="/profilepic" method="post" id="formId" enctype="multipart/form-data">
-						    <input type="file" id="fileField" name="avatar" value="fileToUpload" placeholder="" hidden>
-					    </form>
-				    </div>
-                    <div class="detail">
-                        <div id="Headdetail">
-                            <span >About me</span>
+        <div>
+            <div class="grid-container">
+                <div class="item1">
+                    <div class="item1">
+                        <div class="grid-container-profile">
+                            <div id="browsePic">
+                                <div id="displayPic">
+                                    <img src= "public/img/avatar.png" alt="Profile img">
+                                </div>
+                                <form action="/profilepic" method="post" id="formId" enctype="multipart/form-data">
+                                    <input type="file" id="fileField" name="avatar" value="fileToUpload" placeholder="" hidden>
+                                </form>
+                            </div>
+                            <div class="detail">
+                                <div id="Headdetail">
+                                    <span >About me</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-			</div>
-			
-            <div class="item2"> 
-                <div class="grid-container-detail">
-                    <div>
-                    </div>
-                    <div class="detail">
-                        <div >
-                            User name :  <span id="username"></span>
+                
+                <div class="item2"> 
+                    <div class="grid-container-detail">
+                        <div>
                         </div>
-                        <br>
-                        <div >
-                            Birthday :  <span id="birthdate"></span>
+                        <div class="detail">
+                            <div >
+                                User name :  <span id="username"></span>
+                            </div>
+                            <br>
+                            <div >
+                                Birthday :  <span id="birthdate"></span>
+                            </div>
+                            <br>
+                            <div >
+                                Email :  <span id="email"></span>
+                            </div>
+                            <br>
+                            <div >
+                                Tel. :  <span id="tel"></span>
+                            </div>
                         </div>
-                        <br>
-                        <div >
-                            Email :  <span id="email"></span>
+                        <div>
                         </div>
-                        <br>
-                        <div >
-                            Tel. :  <span id="tel"></span>
-                        </div>
-                    </div>
-                    <div>
                     </div>
                 </div>
-            </div>
-  			<div class="item3">
-                <br>
-                <!-- <div class="footer">
-                    <p>Footer</p>
-                </div> --> 
-  			</div>  
-        </div> 
+                  <div class="item3">
+                      <br>
+                      <br>
+                  </div>  
+            </div> 
+        </div>
     </div>
 </body>
 </html>

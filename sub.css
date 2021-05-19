@@ -28,7 +28,7 @@ html{
 .navbar {
     overflow: hidden;
     background-color: #F0AD69;
-    min-width: none;
+    width: 100%;
 }
   
 /* Links inside the navbar */
@@ -48,13 +48,8 @@ html{
     /* padding: 10px; */
     text-decoration: none;
     width: auto;
-    height: 50px;
+    height: 50%;
 }
-  
-/* .innavbar img{
-    height: 50px;
-    width: 50px;
-} */
   
 /* The dropdown container */
 .dropdown {
@@ -123,44 +118,44 @@ html{
 /*------------------------------------navbar--------------------------------*/
 
 .item1 { 
-    grid-area: header;
     text-align: center;
     grid-column: 2 / span 1;
     background-color: #F4D594;
+    width: auto;
 }
 .item2 { 
-    grid-area: post; 
     text-align: center;
     grid-column: 2 / span 1;
     background-color: #F4D594;
+    width: auto;
 }
 .item3 { 
-    grid-area: main; 
     text-align: center;
     grid-column: 2 / span 1;
     background-color: #F4D594;
+    width: auto;
 }
 
 .grid-container {
 	display: grid;
-    grid-template-columns: 10% auto 10%;
+    grid-template-columns: 10% 80% 10%;
     grid-template-areas: 
     'header'
     'post'
     'main';
-    /* grid-gap: 10px; */
     background-color: #F6ECBB;
 }
 
 .grid-container-profile{
     display: grid;
-    grid-template-columns: auto auto;
-}
+    grid-template-columns: auto 80%;
+    grid-gap: 10px;
+} 
 
 .grid-container > div {
   /* background-color: #f5dc99; */
   text-align: center;
-  padding: 20px 0;
+  padding: 10px ;
   font-size: 30px;
 }
 
@@ -181,9 +176,8 @@ html{
 
 .detail{
 	text-align: center;
-	padding-right: 3%;
+	padding-right: 15px;
 	/* width:50%; */
-	
 }
 
 .detail div{
@@ -249,42 +243,13 @@ button{
     background-color: #3a1c1d;
 }
 
-hr {
-   /* display: block;*/
-    height: 1px;
-    border: 0;
-    border-top: 10px solid #EF7D34;
-	border-radius: 10px;
-    margin: 15px 10px;
-    padding: 0; 
-}
 .postingBoxtype{
     text-align: center;
     border-radius: 20px;
 	background-color: #FEBE9A;
     border: 5px solid #C48547;
-	margin-left: 15px;
-	min-width: 200px;
-}
-
-.newsfeed{
-	display: flex;
-	width: 100%;
-	text-align: left;
-	font-size: 20px;
-	margin-top: 15px;
-}
-
-.postmsg{
-	border-radius: 20px;
-	width: 50%;
-	background-color: #FEBE9A;
-	margin-left: 15px;
-
-	height: 100px;
-	text-align: center;
-	line-height: 100px;
-	min-width: 200px;
+	margin-right: 20%;
+	min-width: 100;
 }
 
 .postuser {
@@ -306,23 +271,18 @@ hr {
 }
 #displayPic{
 	/*display: inline-block;*/
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
     border-radius: 50%;
     border: 5px solid #C48547;
     margin-left: 20px;
-
-	/*background-color: #94A5AC;*/
 }
 
 #displayPic img{
-	/*display: inline-block;*/
-	width: 200px;
-	height: 200px;
+	display: inline-block;
+	width: 150px;
+	height: 150px;
     border-radius: 50%;
-
-
-	/*background-color: #94A5AC;*/
 }
 
 img{
@@ -354,19 +314,9 @@ img{
   text-align: center;
 }
 
-/* .grid-container-profile{
-    display: grid;
-    grid-template-columns: auto 80%;
-    grid-gap: 10px;
-} */
-
-.grid-container-profile{
-    display: flex;
-}
-
 .grid-container-detail{
     display: grid;
-    grid-template-columns: 10% auto 10%;
+    grid-template-columns: auto;
     grid-gap: 10px;
 }
 
@@ -448,20 +398,408 @@ img{
 
 .profileposterimg
 {
-    width: 150px;
-    height: 150px;
+    width: 50%;
+    height: 50%;
     border-radius: 100px;
 }
 
-@media screen and (max-width:700px) {
-    
+.gridmain{
+    display: grid;
+    grid-template-columns: auto;
+
+    background-color: #F6ECBB;
 }
 
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (max-width:768px) {
+    .innavbar{
+        margin-left: 10px;
+    }
     
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    /* Navbar container */
+    .navbar {
+        overflow: hidden;
+        background-color: #F0AD69;
+        width: 100%;
+    }
+      
+    /* Links inside the navbar */
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 30px;
+    }
+    .navbar img {
+        float: left;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        width: auto;
+        height: 30px;
+    }
+      
+    /* The dropdown container */
+    .dropdown {
+        float: right;
+        overflow: hidden;
+        height: auto;
+        width: auto;
+        padding-right: 20px;
+    }
+      
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        font-size: 30px;
+        border: none;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 1000;
+        padding: 10px ;
+        background-color: inherit;
+        font-family: inherit; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+    }
     
+    .dropbtn div img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+      
+    /* Add a red background color to navbar links on hover */
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: rgb(252, 178, 66);
+        color: black;
+    }
+      
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffe3d1;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+      
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: #583E19;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+      
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+      
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    /*------------------------------------navbar--------------------------------*/
+    
+    .item1 { 
+        text-align: center;
+        grid-column: 2 / span 1;
+        background-color: #F4D594;
+        width: auto;
+    }
+    .item2 { 
+        text-align: center;
+        grid-column: 2 / span 1;
+        background-color: #F4D594;
+        width: auto;
+    }
+    .item3 { 
+        text-align: center;
+        grid-column: 2 / span 1;
+        background-color: #F4D594;
+        width: auto;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-areas: 
+        'header'
+        'post'
+        'main';
+        background-color: #F6ECBB;
+    }
+    
+    .grid-container-profile{
+        display: grid;
+        grid-template-columns: auto 80%;
+        grid-gap: 10px;
+    } 
+    
+    .grid-container > div {
+      /* background-color: #f5dc99; */
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+    
+    #posting{
+        text-align: left;
+        padding-left: 5px;
+        padding-top: 5px;
+        /* width:50%; */
+    }
+    
+    #postingbutton{
+        text-align:right;	
+        padding-right: 2px;
+        padding-bottom: 2px;
+        color: #583F17;
+        /* width:50%; */
+    }
+    
+    .detail{
+        text-align: center;
+        padding-right: 15px;
+        /* width:50%; */
+        
+    }
+    
+    .detail div{
+        border-radius: 21px;
+        background-color: #FCCD9F;
+        border: 5px solid #C48547;
+        margin-left: 10px;
+        padding: 20px;
+        width: auto;
+        text-align: left;
+    }
+    
+    #Headdetail{
+        background-color: #C38647;
+        width: 100px;
+        text-align: center;
+    }
+    
+    #Headdetail span{
+        font-size: 40px;
+    }
+    
+    #description{
+        text-align: center;
+        padding-right: 3%;
+        /* width:50%; */
+        
+    }
+    
+    textarea{
+        width: 0%;
+        min-width: 50%;
+        height: 100px;
+        margin-right: 0px;
+        text-align: left;
+        font-size: 20px;
+        color: #583E19;
+        font-family:'Itim', sans-serif;
+        background-color: #FEBE9A;
+        border: none;
+        font-size: 30px;
+    }
+    
+    button{
+        color: #583E19;
+        font-family:'Itim', sans-serif;
+        background-color: #F88B8E;
+        border: 10px #583F17;
+        border-radius: 100px;
+        font-weight: bold;
+    }
+    
+    #postbutton{
+        width:20%;
+        min-width: 100px;
+        font-size: 36px;
+    }
+    
+    #postbutton :hover{
+        width:20%;
+        min-width: 100px;
+        font-size: 36px;
+        background-color: #3a1c1d;
+    }
+    
+    .postingBoxtype{
+        text-align: center;
+        border-radius: 20px;
+        background-color: #FEBE9A;
+        border: 5px solid #C48547;
+        margin-right: 15px;
+        width: 150px;
+    }
+    
+    .postuser {
+        height: 100px;
+        width:50%;
+        text-align: center;
+        line-height: 100px;
+        min-width: 200px;
+    }
+    
+    .picicon {
+        display: inline-block;
+        height: 50px;
+        width:50px;
+    }
+    
+    #browsePic{
+        margin-right: 3%;
+    }
+    #displayPic{
+        /*display: inline-block;*/
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid #C48547;
+        margin-left: 20px;
+    }
+    
+    #displayPic img{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    
+    img{
+        width:100%;
+        height: 100%;
+    }
+    
+    .hidden{
+        display: none;
+    }
+    
+    .logopic{
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        width: auto;
+        height: 30%;
+        padding: 15px;
+    }
+    
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #F0AD69;
+      color: white;
+      text-align: center;
+    }
+    
+    .grid-container-detail{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 10px;
+        font-size: 20px;
+    }
+    
+    .grid-container-post{
+        display: grid;
+        grid-template-columns: 10% auto 10%;
+        grid-gap: 10px;
+    }
+    
+    .Reactbutton
+    {
+        text-align: left;
+        grid-column: 2 / span 1;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .Reactbutton
+    {
+        text-align: left;
+        grid-column: 2 / span 1;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .Reactbutton img
+    {
+        width: 50px;
+        height: 50px;
+        padding: 10%;
+        margin: auto;
+    }
+    
+    .Reactbutton a
+    {
+        font-size: 26px;
+        text-align: center;
+        margin: auto;
+        padding-right: 10px;
+    }
+    
+    .Reactbutton button
+    {
+        background-color: #F0AD69;
+        min-width: 100px;
+    }
+    
+    .gridReactButton
+    {
+        display: flex;
+    }
+    
+    .grid-container-postbox{
+        display: grid;
+        grid-template-columns: 30% auto;
+        grid-gap: 10px;
+        border-radius: 20px;
+        background-color: #FAC289;
+        grid-column: 2 / span 1;
+        
+    }
+    
+    #poster{
+        padding: 10%;
+    }
+    
+    .post-by{
+        margin: auto;
+    }
+    
+    .post-time{
+        margin: auto;
+        font-size: 18px;
+    }
+    
+    #content{
+        margin: auto;
+    }
+    
+    .profileposterimg
+    {
+        min-width: 50%;
+        min-height: 50%;
+        border-radius: 100px;
+    }
+    
+    .gridmain{
+        display: grid;
+        grid-template-columns: auto;
+    
+        background-color: #F6ECBB;
+    }
 }

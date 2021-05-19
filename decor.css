@@ -207,7 +207,7 @@ input.usernamelog, .passwordlog {
 #font-login{
     font-size: 25px;
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width:768px) {
     .formlogin {
         width: 80%;
     }

@@ -23,6 +23,7 @@ function pageLoad(){
     var postBut = document.getElementById('postbutton').onclick = submitpost;
 	
 	var username = getCookie('username');
+    document.getElementById("username").innerHTML = username;
 
 	showImg('public/img/' + getCookie('img'));
     showImg2('public/img/' + getCookie('img'));
