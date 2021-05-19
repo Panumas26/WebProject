@@ -65,32 +65,13 @@ app.post('/login',async (req,res) => {
     else if(username == result[0].username && password == result[0].password){
         res.cookie('username', username)
         res.cookie('img', result[0].img)
+        res.cookie('user_id', result[0].id)
         console.log("Now, You are Log in")
         return res.redirect('profile.html');
     }
     console.log(result)
 })
 
-// app.post('/login', function (req,res) {
-//     var username = req.body.username;
-//     var password = req.body.password;
-//     if (username && password) {
-//         con.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], function (error, results, fields) {
-//             let result = await queryDB(sql);
-//             if (results.length > 0) {
-//                 res.cookie('username', username);
-//                 res.cookie('img', result[0].img)
-//                 return res.redirect("profile.html");
-//             } else {
-//                 console.log("Incorrect Username or Password!");
-//                 return res.redirect("index.html?error=4");
-//             }
-//         });
-//     } 
-//     else{
-//         console.log(err);
-//     }
-// });
 app.post("/register", async (req, res) => {
     console.log(req.body);
     let sql = "CREATE TABLE IF NOT EXISTS users (id int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,firstname varchar(50), lastname varchar(50),gender varchar(50),birthday DATE,email  varchar(50),username varchar(50),phone int(10),password varchar(255),img varchar(300))";
@@ -153,23 +134,104 @@ const updateImg = async (username, filen) => {
     let result = await queryDB(sql);
 }
 
-//ทำให้สมบูรณ์
-app.get('/readPost', async (req,res) => {
-    let sql = `SELECT username, post FROM postDB`;
+app.get("/readallprofile", async(req, res) => {
+    console.log(req.header.referer);
+    let sql = `SELECT DATE_FORMAT(birthday,"%Y-%m-%d")AS birthday,username,email,Phone FROM users WHERE username = '${req.cookies.username}'`;
     let result = await queryDB(sql);
-    result = Object.assign({},result);
-    res.json(result);
+    res.end(JSON.stringify(result));
 })
 
-//ทำให้สมบูรณ์
-app.post('/writePost',async (req,res) => {
-    let getPost = req.body.post
-    let sql = `INSERT INTO postDB (username, post) VALUES ("${req.cookies.username}", "${getPost}")`;
+let postdata = null;
+
+app.post("/submitpost", async(req, res) => {
+    //console.log(req.body);
+    writePost(req);
+    postdata = await readPost();
+    console.log("Send data to client!")
+    res.end(postdata);
+})
+
+app.get("/readallpost", async(req, res) => {
+    postdata = await readPost();
+    console.log("Send data to client!")
+    res.end(postdata);
+})
+
+const writePost = async(data) => {
+    return new Promise((resolve, rejects) => {
+        //console.log(data);
+        let sql = "CREATE TABLE IF NOT EXISTS postInfo (id INT AUTO_INCREMENT PRIMARY KEY, post_date DATETIME DEFAULT CURRENT_TIMESTAMP, username VARCHAR(255), email VARCHAR(255), post VARCHAR(255),like_count VARCHAR(100),like_user LONGTEXT)";
+        let result = queryDB(sql);
+        sql = `INSERT INTO postInfo (username, email, post, like_count,like_user) VALUES ("${data.cookies.username}","${data.cookies.email}", "${data.body.post}", "${data.body.likecount}","0")`;
+        result = queryDB(sql);
+        console.log("Post Success!");
+        resolve("Post Success!");
+    })
+}
+
+const readPost = async() => {
+    return new Promise((resolve, reject) => {
+        con.query(`SELECT id,DATE_FORMAT(post_date,"%Y-%m-%d %H:%i")AS post_date,username,email,post,like_count,like_user FROM postInfo`, async function(err, result, fields) {
+            if (err) {
+                //console.log(err);
+                resolve(JSON.stringify("No post found", null, "\t"));
+                reject(err);
+            } else {
+                console.log("Read Success!");
+                resolve(JSON.stringify(result, null, "\t"));
+            }
+        })
+    })
+}
+app.post("/getposterimg", async(req, res) => {
+    //console.log(req.body.posterEmail);
+    let sqldata = `SELECT img FROM users WHERE username = '${req.body.username}'`;
+    let resultdata = await queryDB(sqldata);
+    //console.log(resultdata[0].profilepic);
+    res.end(JSON.stringify(resultdata[0].img));
+})
+
+app.post("/likepost", async(req, res) => {
+    //console.log(req.body.postid);
+    postres = await updateLikePost(req);
+    res.end(postres);
+})
+
+const updateLikePost = async(postid) => {
+    let likedata = `SELECT like_count,like_user FROM postInfo WHERE id = '${postid.body.postid}'`;
+    let resultlikedata = await queryDB(likedata);
+    //console.log(resultlikedata[0]);
+    var x = parseInt(resultlikedata[0].like_count);
+    x++;
+    var y = resultlikedata[0].like_user;
+    y += ", " + postid.cookies.user_id;
+    //console.log(x);
+    let sql = `UPDATE postInfo SET like_count = '${x}' WHERE id = '${postid.body.postid}'`;
     let result = await queryDB(sql);
-    sql = `SELECT username, post FROM postDB`;
-    result = await queryDB(sql);
-    result = Object.assign({},result);
-    res.json(result);
+    let sqlid = `UPDATE postInfo SET like_user = '${y}' WHERE id = '${postid.body.postid}'`;
+    let resultid = await queryDB(sqlid);
+    return JSON.stringify(x);
+}
+
+app.post("/Reset", async (req, res) => {
+    var email = req.body.email;
+    var Currentpassword = req.body.Currentpassword;
+    var Newpassword = req.body.Newpassword;
+    if (email && Currentpassword) {
+        con.query('SELECT * FROM users WHERE email = ? AND password = ?', [email, Currentpassword], async function (error, results, fields) {
+            if (results.length > 0) {
+                let sql = `UPDATE users SET password = '${Newpassword}' WHERE email = '${email}'`;
+                let result = await queryDB(sql);
+                return res.redirect("index.html?error=6");
+            } else {
+                console.log("Incorrect Email or Password!");
+                return res.redirect("Reset.html?error=5");
+            }
+        });
+    }
+    else {
+        console.log(err);
+    }
 })
 
 app.listen(port, hostname, () => {

@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
-/*font https://fonts.google.com/specimen/Kanit?preview.text_type=custom*/
 
 /* ---------------------------------body-------------------------------- */
 body{
@@ -30,6 +28,7 @@ html{
 .navbar {
     overflow: hidden;
     background-color: #F0AD69;
+    min-width: none;
 }
   
 /* Links inside the navbar */
@@ -166,10 +165,18 @@ html{
 }
 
 #posting{
-	text-align: center;
-	padding-right: 3%;
+	text-align: left;
+    padding-left: 5px;
+    padding-top: 5px;
 	/* width:50%; */
-	
+}
+
+#postingbutton{
+	text-align:right;	
+    padding-right: 2px;
+    padding-bottom: 2px;
+    color: #583F17;
+	/* width:50%; */
 }
 
 .detail{
@@ -191,6 +198,12 @@ html{
 
 #Headdetail{
     background-color: #C38647;
+    width: 250px;
+    text-align: center;
+}
+
+#Headdetail span{
+    font-size: 56px;
 }
 
 #description{
@@ -209,17 +222,31 @@ textarea{
 	font-size: 20px;
     color: #583E19;
     font-family:'Itim', sans-serif;
+    background-color: #FEBE9A;
+    border: none;
+    font-size: 48px;
 }
 
 button{
     color: #583E19;
     font-family:'Itim', sans-serif;
+    background-color: #F88B8E;
+    border: 10px #583F17;
+    border-radius: 100px;
+    font-weight: bold;
 }
 
 #postbutton{
 	width:20%;
 	min-width: 100px;
-	font-size: 20px;
+    font-size: 36px;
+}
+
+#postbutton :hover{
+	width:20%;
+	min-width: 100px;
+    font-size: 36px;
+    background-color: #3a1c1d;
 }
 
 hr {
@@ -230,7 +257,15 @@ hr {
 	border-radius: 10px;
     margin: 15px 10px;
     padding: 0; 
-} 
+}
+.postingBoxtype{
+    text-align: center;
+    border-radius: 20px;
+	background-color: #FEBE9A;
+    border: 5px solid #C48547;
+	margin-left: 15px;
+	min-width: 200px;
+}
 
 .newsfeed{
 	display: flex;
@@ -271,18 +306,19 @@ hr {
 }
 #displayPic{
 	/*display: inline-block;*/
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
     border-radius: 50%;
     border: 5px solid #C48547;
+    margin-left: 20px;
 
 	/*background-color: #94A5AC;*/
 }
 
 #displayPic img{
 	/*display: inline-block;*/
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
     border-radius: 50%;
 
 
@@ -308,10 +344,124 @@ img{
     padding: 20px;
 }
 
-@media only screen and (max-width: 767px){
-	.grid-container {
-		grid-template-areas:
-		  'header'
-		  'post' 'main';
-	}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F0AD69;
+  color: white;
+  text-align: center;
+}
+
+/* .grid-container-profile{
+    display: grid;
+    grid-template-columns: auto 80%;
+    grid-gap: 10px;
+} */
+
+.grid-container-profile{
+    display: flex;
+}
+
+.grid-container-detail{
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-gap: 10px;
+}
+
+.grid-container-post{
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-gap: 10px;
+}
+
+.Reactbutton
+{
+    text-align: left;
+    grid-column: 2 / span 1;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.Reactbutton
+{
+    text-align: left;
+    grid-column: 2 / span 1;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.Reactbutton img
+{
+    width: 50px;
+    height: 50px;
+    padding: 10%;
+    margin: auto;
+}
+
+.Reactbutton a
+{
+    font-size: 26px;
+    text-align: center;
+    margin: auto;
+    padding-right: 10px;
+}
+
+.Reactbutton button
+{
+    background-color: #F0AD69;
+    min-width: 100px;
+}
+
+.gridReactButton
+{
+    display: flex;
+}
+
+.grid-container-postbox{
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-gap: 10px;
+    border-radius: 20px;
+	background-color: #FAC289;
+    grid-column: 2 / span 1;
+    
+}
+
+#poster{
+    padding: 10%;
+}
+
+.post-by{
+    margin: auto;
+}
+
+.post-time{
+    margin: auto;
+    font-size: 18px;
+}
+
+#content{
+    margin: auto;
+}
+
+.profileposterimg
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+@media screen and (max-width:700px) {
+    
+}
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    
 }

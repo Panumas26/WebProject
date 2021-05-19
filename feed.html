@@ -37,23 +37,74 @@
         <div class="grid-container">
 
 			<div class="item1">
-				<div id="displayPic">
-                    <img src= "public/img/avatar.png" alt="Profile img">
+                <div class="grid-container-profile">
+                    <div id="displayPic">
+                        <img src= "public/img/avatar.png" alt="Profile img">
+                    </div>
+                    <div>
+                        <div class="detail">
+                            <div id="Headdetail">
+                                <span >My Post</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="postingBoxtype">
+                            <div id="namebox">
+                                <span name="username" id="username">mika</span>
+                            </div>
+                            <div id="posting">
+                                <!-- <textarea name="msg" id="textmsg" cols="50" rows="5" placeholder="post here"></textarea> -->
+                                <textarea name="postinput" id="postinput" cols="50" rows="5" placeholder="post here"></textarea>
+                            </div>
+                            <div id ="postingbutton">
+                                <button id="postbutton">Post</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 			</div>
 			
             <div class="item2"> 
-                <div id="posting">
-                    <textarea name="msg" id="textmsg" value="" placeholder="" rows="4" cols="50"></textarea>
-                  <br>
-                    <button id="postbutton">Post</button>
+                <div id="feed-container">
+                    <div class="allpost-box">
+                        <div class="grid-container-post">
+                            <div class="grid-container-postbox">
+                                <div id="poster">
+                                    <div class="poster-box">
+                                        <div class="poster-img">
+                                            <img src="public/img/avatar.png">
+                                        </div>
+                                        <div class="post-by">
+                                            <span>mika</span>
+                                        </div>
+                                        <div class="post-time">
+                                            <small>2021-05-13 / 01:16</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content">
+                                    <div class="content-box">
+                                        <p>content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Reactbutton">
+                                <button type="button" class="likebutton">
+                                    <div class="gridReactButton">
+                                        <img src="public/img/like.png">
+                                        <a>0</a> 
+                                    </div>
+                                </button>
+                            </div>
+
+                        </div>
                 </div>
             </div>
   			<div class="item3">
   				
-  				<div id="feed-container">
+  				<!-- <div id="feed-container">
   					
-  				</div>
+  				</div> -->
   				
   			</div>   
 		</div>

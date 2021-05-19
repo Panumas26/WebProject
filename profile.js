@@ -19,22 +19,20 @@ function getCookie(name){
 }
 
 function pageLoad(){
-	document.getElementById('postbutton').onclick = getData;
+    getprofileInfo();
 	document.getElementById('displayPic').onclick = fileUpload;
 	document.getElementById('fileField').onchange = fileSubmit;
 	
 	var username = getCookie('username');
-    // var birthday = result[0].birthday;
-    // var tel = result[0].phone;
+
 
 	document.getElementById("username").innerHTML = username;
-    // document.getElementById("birthdate").innerHTML = birthday;
-    // document.getElementById("tel").innerHTML = tel;
+
 	console.log(getCookie('img'));
 	showImg('public/img/' + getCookie('img'));
     showImg2('public/img/' + getCookie('img'));
-	readPost();
 }
+
 function getData(){
 	var msg = document.getElementById("textmsg").value;
 	document.getElementById("textmsg").value = "";
@@ -70,49 +68,16 @@ function showImg2(filename){
 	}
 }
 
-// complete it
-async function readPost(){
-	const response = await fetch("/readPost");
-	const content = await response.json();
-	showPost(content);
-}
+const getprofileInfo = (async() => {
+    await fetch("/readallprofile").then((response) => {
+        response.json().then((data) => {
+            console.log(data);
+            document.getElementById("birthdate").innerHTML = data[0].birthday;
+            document.getElementById("email").innerHTML = data[0].email;
+            document.getElementById("tel").innerHTML = data[0].Phone;
 
-// complete it
-async function writePost(msg){
-	console.log("Send MSG to server");
-	const response = await fetch("/writePost",{
-		method: "POST",
-		headers:{
-			'Accept':'application/json',
-			'Content-Type':'application/json'
-		},
-		body: JSON.stringify({
-	 	post:msg})
-	})
-	const content = await response.json();
-	console.log(content)
-	showPost(content);
-}
-
-// แสดง post ที่อ่านมาได้ ลงในพื้นที่ที่กำหนด
-function showPost(data){
-	var keys = Object.keys(data);
-	var divTag = document.getElementById("feed-container");
-	divTag.innerHTML = "";
-	for (var i = keys.length-1; i >=0 ; i--) {
-
-		var temp = document.createElement("div");
-		temp.className = "newsfeed";
-		divTag.appendChild(temp);
-		var temp1 = document.createElement("div");
-		temp1.className = "postmsg";
-		temp1.innerHTML = data[keys[i]]["post"];
-		temp.appendChild(temp1);
-		var temp1 = document.createElement("div");
-		temp1.className = "postuser";
-		
-		temp1.innerHTML = "Posted by: "+data[keys[i]]["username"];
-		temp.appendChild(temp1);
-		
-	}
-}
+        }).catch((err) => {
+            console.log(err);
+        })
+    })
+})

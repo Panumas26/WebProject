@@ -35,47 +35,56 @@
         </div>
 
         <div class="grid-container">
-
 			<div class="item1">
-				
-				<div id="browsePic">
-					<div id="displayPic">
-						<img src= "public/img/avatar.png" alt="Profile img">
-					</div>
-					<form action="/profilepic" method="post" id="formId" enctype="multipart/form-data">
-						<input type="file" id="fileField" name="avatar" value="fileToUpload" placeholder="" hidden>
-					</form>
-				</div>
-                <br>
-				<div class="detail">
-                    <div id="Headdetail">
-                        <span >About me</span>
+				<div class="grid-container-profile">
+				    <div id="browsePic">
+					    <div id="displayPic">
+						    <img src= "public/img/avatar.png" alt="Profile img">
+					    </div>
+					    <form action="/profilepic" method="post" id="formId" enctype="multipart/form-data">
+						    <input type="file" id="fileField" name="avatar" value="fileToUpload" placeholder="" hidden>
+					    </form>
+				    </div>
+                    <div class="detail">
+                        <div id="Headdetail">
+                            <span >About me</span>
+                        </div>
                     </div>
                 </div>
 			</div>
 			
             <div class="item2"> 
-                <div class="detail">
-                    <div >
-                        User name :  <span id="username"></span>
+                <div class="grid-container-detail">
+                    <div>
                     </div>
-                    <br>
-                    <div >
-                        Birthday :  <span id="birthdate"></span>
+                    <div class="detail">
+                        <div >
+                            User name :  <span id="username"></span>
+                        </div>
+                        <br>
+                        <div >
+                            Birthday :  <span id="birthdate"></span>
+                        </div>
+                        <br>
+                        <div >
+                            Email :  <span id="email"></span>
+                        </div>
+                        <br>
+                        <div >
+                            Tel. :  <span id="tel"></span>
+                        </div>
                     </div>
-                    <br>
-                    <div >
-                        Tel. :  <span id="tel"></span>
+                    <div>
                     </div>
                 </div>
             </div>
   			<div class="item3">
-                <div id="description">
-                    <textarea name="msg" id="textmsg" value="" placeholder="" rows="4" cols="50"></textarea>
-                  <br>
-                    <button id="postbutton">Post</button>
-                </div>
-  			</div>   
+                <br>
+                <!-- <div class="footer">
+                    <p>Footer</p>
+                </div> --> 
+  			</div>  
+        </div> 
     </div>
 </body>
 </html>

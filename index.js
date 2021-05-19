@@ -14,4 +14,10 @@ function pageLoad() {
     else if(urlParams.get("error") == 4) {
         alert("Incorrect Username or Password!");      
     }
+    else if(urlParams.get("error") == 5) {
+        alert("Incorrect Email or Password!");      
+    }
+    else if(urlParams.get("error") == 6) {
+        alert("Reset password successfully!");      
+    }
 }
