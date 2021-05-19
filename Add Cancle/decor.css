@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+body {
+    display: block;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: #45330F;
+    background-color: #FFE8D5;
+}
+
+.header {
+    margin-top: 8%; 
+    text-align: center;
+}
+
+.corgi {
+    width: 100%;
+}
+
+.bodyform {
+    transform: translateY(50px);
+    background-color: rgba(255, 178, 133, 0.322);
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bodyform_register {
+    transform: translateY(65px);
+    background-color: rgba(255, 178, 133, 0.322);
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form {
+    position: relative;
+}
+
+h2 {
+    margin: 0px;
+}
+
+h2, #myForm {
+    font-size: 20px;
+}
+
+/* input */
+
+input.firstname, .lastname, .password, .email, .tel {
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0px;
+    width: 100%;
+    background-color: #BA954E;
+    padding-left: 10px;
+}
+
+.bodyform input.usernamelog,input.passwordlog {
+    width: 100%;
+}
+
+input.username, .birthday {
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0px;
+    width: 50%;
+    background-color: #BA954E;
+    padding-left: 10px;
+}
+
+input.button {
+    border-radius: 100px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    width: 80px;
+    height: auto;
+}
+button{
+    border-radius: 100px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    width: 80px;
+    height: auto;
+    font-size: 15px;
+
+    background-color: #BA954E;
+}
+
+input.usernamelog, .passwordlog {
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0px;
+    width: 50%;
+    background-color: #BA954E;
+    padding-left: 10px;
+}
+
+/* button login&cancel */
+
+#but_login {
+    margin: auto;
+    display: block;
+    width: 165px;
+}
+
+.button {
+    font-size: 15px;
+
+    background-color: #BA954E;
+}
+
+/* forget */
+
+.forget_pass {
+    color: #831C1D;
+    margin-left: auto;
+    margin-top: 10px;
+    display: block;
+    text-align: right;
+}
+
+/* or */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 10% auto;
+    grid-gap: 10px;
+    height: 24px;
+}
+
+#textline1 {
+    grid-column: 1 / 1;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #AB7916;
+    left: 0;
+    margin-top: 12px;
+}
+
+#textOr {
+    grid-column: 2 / 2;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#textline2 {
+    grid-column: 3 / 3;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #AB7916;
+    right: 0;
+    margin-top: 12px;
+}
+
+/* register */
+
+.Regis-text {
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+    color: #45330F;
+}
+
+/* grid_login */
+
+.grid_login {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-gap: 10px;
+    height: auto;
+}
+
+.dogface {
+    margin: auto;
+    max-width: 800px;
+    width: 100%;
+    height: 99vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("pic/bgdog.PNG");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: 700px;
+}
+#font-login{
+    font-size: 25px;
+}
+@media screen and (max-width:700px) {
+    .formlogin {
+        width: 80%;
+    }
+    .header {
+        margin-top: 10%;
+        text-align: center;
+    }
+    .dogface {
+        margin: auto;
+        max-width: 500px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url("pic/bgdog.PNG");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: 500px;
+    }
+    #font-login{
+        font-size: 15px;
+    }
+
+    
+    .bodyform_register {
+        transform: translateY(65px);
+        background-color: rgba(255, 178, 133, 0.322);
+        width: 50%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .formlogin {
+        width: 70%;
+    }
+    .header {
+        margin-top: 30%;
+        text-align: center;
+    }
+    .dogface {
+        margin: auto;
+        max-width: 400px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url("pic/bgdog.PNG");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: 380px;
+    }
+    .bodyform {
+        transform: translateY(50px);
+        background-color: rgba(255, 178, 133, 0.322);
+        width: 50%;
+        margin: auto;
+        padding: 0px;
+        border-radius: 15px;
+    }
+    .forget_pass {
+        color: #831C1D;
+        margin-left: auto;
+        margin-top: 5px;
+        font-size: 12px;
+        display: block;
+        text-align: right;
+    }
+    h2, #myForm {
+        font-size: 15px;
+    }
+    .Regis-text{
+        font-size: 15px;
+    }
+    #font-login{
+        font-size: 15px;
+    }
+    #textOr {
+        grid-column: 2 / 2;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #sizelogo {
+        width: 70%;
+    }
+    input.button {
+        margin-left: 5%;
+        font-size: 12px;
+        border-radius: 100px;
+        border: none;
+        padding: 8px;
+        font-weight: bold;
+        width: 70px;
+        height: auto;
+    }
+    input.usernamelog, .passwordlog {
+        margin: 6px 0px;
+    }
+    .bodyform_register {
+        transform: translateY(45px);
+        background-color: rgba(255, 178, 133, 0.322);
+        width: 80%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    input.username, .password,.birthday {
+        margin: 2px 10px;
+        width: 35%;
+    }
+    input.firstname, .lastname, .password, .email, .tel {
+        height: 25px;
+        border-radius: 10px;
+        border: none;
+        margin: 2px 10px;
+        width: 70%;
+        background-color: #BA954E;
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    .formlogin {
+        width: 70%;
+    }
+    .header {
+        margin-top: 30%;
+        text-align: center;
+    }
+    .dogface {
+        margin: auto;
+        max-width: 400px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url("pic/bgdog.PNG");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: 380px;
+    }
+    .bodyform {
+        transform: translateY(50px);
+        background-color: rgba(255, 178, 133, 0.322);
+        width: 50%;
+        margin: auto;
+        padding: 0px;
+        border-radius: 15px;
+    }
+    .forget_pass {
+        color: #831C1D;
+        margin-left: auto;
+        margin-top: 5px;
+        font-size: 12px;
+        display: block;
+        text-align: right;
+    }
+    h2, #myForm {
+        font-size: 15px;
+    }
+    .Regis-text{
+        font-size: 15px;
+    }
+    #font-login{
+        font-size: 15px;
+    }
+    #textOr {
+        grid-column: 2 / 2;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #sizelogo {
+        width: 60%;
+    }
+    input.button {
+        border-radius: 100px;
+        border: none;
+        padding: 8px;
+        font-weight: bold;
+        width: 75px;
+        height: auto;
+    }
+    #but_login {
+        margin: auto;
+        display: flex;
+        width: 165px;
+    }
+    input.username, .password,.birthday {
+        margin: 2px 15px;
+        width: 35%;
+    }
+    input.firstname, .lastname, .password, .email, .tel {
+        height: 25px;
+        border-radius: 10px;
+        border: none;
+        margin: 2px 15px;
+        width: 70%;
+        background-color: #BA954E;
+        padding-left: 10px;
+    }
+    input.usernamelog, .passwordlog {
+        margin: 6px 0px;
+    }
+    .bodyform_register {
+        transform: translateY(50px);
+        background-color: rgba(255, 178, 133, 0.322);
+        width: 70%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
