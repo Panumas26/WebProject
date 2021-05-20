@@ -184,6 +184,7 @@ html{
     border-radius: 21px;
     background-color: #FCCD9F;
     border: 5px solid #C48547;
+    box-shadow: -10px 5px #5c3916;
     margin-left: 10px;
     padding: 20px;
     width: auto;
@@ -192,6 +193,7 @@ html{
 
 #Headdetail{
     background-color: #C38647;
+    box-shadow: -10px 5px #5c3916;
     width: 250px;
     text-align: center;
 }
@@ -248,6 +250,7 @@ button{
     border-radius: 20px;
 	background-color: #FEBE9A;
     border: 5px solid #C48547;
+    box-shadow: -10px 5px #5c3916;
 	margin-right: 20%;
 	min-width: 100;
 }
@@ -275,6 +278,7 @@ button{
 	height: 150px;
     border-radius: 50%;
     border: 5px solid #C48547;
+    box-shadow: -10px 5px #5c3916;
     margin-left: 20px;
 }
 
@@ -367,6 +371,7 @@ img{
     grid-gap: 10px;
     border-radius: 20px;
 	background-color: #FAC289;
+    box-shadow: -10px 5px #5c3916;
     grid-column: 2 / span 1;
     
 }
@@ -376,7 +381,8 @@ img{
 }
 
 .post-by{
-    margin: auto;
+    width: auto;
+    height: 40px;
 }
 
 .post-time{
@@ -575,6 +581,7 @@ img{
     
     #Headdetail{
         background-color: #C38647;
+        box-shadow: -8px 4px #5c3916;
         width: 100px;
         text-align: center;
     }
@@ -762,7 +769,8 @@ img{
     }
     
     .post-by{
-        margin: auto;
+        width: auto;
+    height: 30px;
     }
     
     .post-time{
@@ -962,6 +970,7 @@ img{
     
     #Headdetail{
         background-color: #C38647;
+        box-shadow: -7px 3px #5c3916;
         width: 100px;
         text-align: center;
     }
@@ -1148,7 +1157,8 @@ img{
     }
     
     .post-by{
-        margin: auto;
+        width: auto;
+        height: auto;
     }
 
     .post-by span{
