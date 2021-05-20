@@ -168,9 +168,9 @@ app.get("/readallpost", async(req, res) => {
 const writePost = async(data) => {
     return new Promise((resolve, rejects) => {
         //console.log(data);
-        let sql = "CREATE TABLE IF NOT EXISTS postInfo (id INT AUTO_INCREMENT PRIMARY KEY, post_date DATETIME DEFAULT CURRENT_TIMESTAMP, username VARCHAR(255), email VARCHAR(255), post VARCHAR(255),like_count VARCHAR(100),like_user LONGTEXT)";
+        let sql = "CREATE TABLE IF NOT EXISTS postInfo (id INT AUTO_INCREMENT PRIMARY KEY, post_date DATETIME DEFAULT CURRENT_TIMESTAMP, username VARCHAR(255), post VARCHAR(255),like_count VARCHAR(100),like_user LONGTEXT)";
         let result = queryDB(sql);
-        sql = `INSERT INTO postInfo (username, email, post, like_count,like_user) VALUES ("${data.cookies.username}","${data.cookies.email}", "${data.body.post}", "${data.body.likecount}","0")`;
+        sql = `INSERT INTO postInfo (username, post, like_count,like_user) VALUES ("${data.cookies.username}", "${data.body.post}", "${data.body.likecount}","0")`;
         result = queryDB(sql);
         console.log("Post Success!");
         resolve("Post Success!");
@@ -179,7 +179,7 @@ const writePost = async(data) => {
 
 const readPost = async() => {
     return new Promise((resolve, reject) => {
-        con.query(`SELECT id,DATE_FORMAT(post_date,"%Y-%m-%d %H:%i")AS post_date,username,email,post,like_count,like_user FROM postInfo`, async function(err, result, fields) {
+        con.query(`SELECT id,DATE_FORMAT(post_date,"%Y-%m-%d %H:%i")AS post_date,username,post,like_count,like_user FROM postInfo`, async function(err, result, fields) {
             if (err) {
                 //console.log(err);
                 resolve(JSON.stringify("No post found", null, "\t"));
