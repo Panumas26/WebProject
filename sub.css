@@ -227,7 +227,6 @@ button{
     color: #583E19;
     font-family:'Itim', sans-serif;
     background-color: #F88B8E;
-    border: 10px #583F17;
     border-radius: 100px;
     font-weight: bold;
 }
@@ -236,6 +235,7 @@ button{
 	width:20%;
 	min-width: 100px;
     font-size: 36px;
+    border: 2px solid #583F17;
 }
 
 #postbutton :hover{
@@ -253,6 +253,11 @@ button{
     box-shadow: -10px 5px #5c3916;
 	margin-right: 20%;
 	min-width: 100;
+}
+
+.likebutton{
+    border: none;
+    box-shadow: -8px 3px #5c3916;
 }
 
 .postuser {
