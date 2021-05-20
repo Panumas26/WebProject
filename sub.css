@@ -151,6 +151,16 @@ html{
     grid-gap: 10px;
 } 
 
+.upload{
+    display: inline-block;
+    color: #583E19;
+    font-family:'Itim', sans-serif;
+    background-color: #F88B8E;
+    border-radius: 100px;
+    font-weight: bold;
+    border: none;
+}
+
 .grid-container > div {
   /* background-color: #f5dc99; */
   text-align: center;
@@ -208,6 +218,10 @@ html{
 	
 }
 
+#browsePicA{
+    font-size: 10px;
+}  
+
 textarea{
 	width: 90%;
 	min-width: 200px;
@@ -220,6 +234,7 @@ textarea{
     background-color: #FEBE9A;
     border: none;
     font-size: 48px;
+    resize: none;
 }
 
 button{

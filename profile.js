@@ -20,11 +20,10 @@ function getCookie(name){
 
 function pageLoad(){
     getprofileInfo();
-	document.getElementById('displayPic').onclick = fileUpload;
-	document.getElementById('fileField').onchange = fileSubmit;
+    document.getElementById('submitpic').onclick = fileUpload;
+    document.getElementById('fileField').onchange = fileSubmit;
 	
 	var username = getCookie('username');
-
 
 	document.getElementById("username").innerHTML = username;
 

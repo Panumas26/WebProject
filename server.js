@@ -143,7 +143,7 @@ const updateImg = async (username, filen) => {
 }
 
 app.get("/readallprofile", async(req, res) => {
-    console.log(req.header.referer);
+    // console.log(req.header.referer);
     let sql = `SELECT DATE_FORMAT(birthday,"%Y-%m-%d")AS birthday,username,email,Phone FROM users WHERE username = '${req.cookies.username}'`;
     let result = await queryDB(sql);
     res.end(JSON.stringify(result));
