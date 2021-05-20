@@ -45,10 +45,9 @@ html{
     float: left;
     display: block;
     text-align: center;
-    /* padding: 10px; */
     text-decoration: none;
     width: auto;
-    height: 50%;
+    height: 50px;
 }
   
 /* The dropdown container */
